@@ -33,10 +33,21 @@ export default () => {
 				{ended && 'Reload to play again'}
 			</button>
 			{ended && (
-				<h2>
-					Clicks: {clicks}
-					<br />Clicks per Second: {clicks / 5}
-				</h2>
+				<div>
+					<h2>
+						Clicks: {clicks}
+						<br />Clicks per Second: {clicks / 5}
+					</h2>
+					<button
+						onClick={(event) => {
+							setStarted(false);
+							setEnded(false);
+						}}
+					>
+						Restart the game
+					</button>
+				</div>
+			)}
 			)}
 			<style jsx>{`
 				:global(body) {
