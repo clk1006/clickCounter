@@ -1,2 +1,2 @@
 # clickCounter
-## server-ip : clickcounter.now.sh
+## server-ip : https://clickcounter.now.sh
