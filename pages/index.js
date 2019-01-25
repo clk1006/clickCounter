@@ -66,7 +66,7 @@ export default () => {
 				h2 {
 					text-align: center;
 					color: darkpink;
-					font-size: 4vw;
+					font-size: 3vw;
 				}
 				button {
 					background: lightgreen;
@@ -74,7 +74,7 @@ export default () => {
 					font-size: 400%;
 					width: 50vw;
 					margin-left: 25vw;
-					height: 30vh;
+					height: 20vh;
 				}
 			`}</style>
 		</div>
