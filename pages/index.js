@@ -3,6 +3,7 @@ export default () => {
 	const [ started, setStarted ] = useState(false);
 	const [ clicks, setClicks ] = useState(0);
 	const [ ended, setEnded ] = useState(false);
+	const [ duration, setDuration ] = useState(5000);
 	useEffect(
 		() => {
 			if (started) {
@@ -10,7 +11,7 @@ export default () => {
 				setTimeout(() => {
 					setStarted(false);
 					setEnded(true);
-				}, 5000);
+				}, duration);
 			}
 		},
 		[ started ]
@@ -19,6 +20,24 @@ export default () => {
 	return (
 		<div className="root">
 			<h1>The click detector</h1>
+			<label>Select duration of playing</label>
+			<select>
+				<option key="0" value="1000">
+					1 second
+				</option>
+				<option key="1" value="5000">
+					5 seconds
+				</option>
+				<option key="2" value="10000">
+					10 seconds
+				</option>
+				<option key="3" value="60000">
+					60 seconds
+				</option>
+				<option key="4" value="100000">
+					100 seconds
+				</option>
+			</select>
 			<button
 				onClick={(event) => {
 					if (!started && !ended) {
@@ -30,13 +49,12 @@ export default () => {
 			>
 				{!started && !ended && 'Click me to start and play the game for five seconds'}
 				{started && 'Click me!!!'}
-				{ended && 'Reload to play again'}
 			</button>
 			{ended && (
 				<div>
 					<h2>
 						Clicks: {clicks}
-						<br />Clicks per Second: {clicks / 5}
+						<br />Clicks per Second: {clicks / duration * 1000}
 					</h2>
 					<button
 						onClick={(event) => {
