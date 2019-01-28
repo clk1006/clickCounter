@@ -91,7 +91,7 @@ export default () => {
 					font-size: 400%;
 					width: 50vw;
 					margin-left: 25vw;
-					height: 20vh;
+					height: 15vh;
 				}
 				select {
 					font-size: 3vw;
@@ -101,10 +101,10 @@ export default () => {
 					margin-left:25vw;
 				}
 				label {
-						font-size: 3vw;
-						color: darkred;
-						text-align: center;s
-					}
+					font-size: 3vw;
+					color: darkred;
+					text-align: center;s
+				}
 			`}</style>
 		</div>
 	);
