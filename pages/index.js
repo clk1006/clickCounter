@@ -47,7 +47,7 @@ export default () => {
 					}
 				}}
 			>
-				{!started && !ended && 'Click me to start and play the game for five seconds'}
+				{!started && !ended && 'Click me to start playing the game'}
 				{started && 'Click me!!!'}
 			</button>
 			{ended && (
