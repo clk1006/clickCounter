@@ -21,7 +21,11 @@ export default () => {
 		<div className="root">
 			<h1>The click counter</h1>
 			<label>Select duration of playing</label>
-			<select>
+			<select
+				onChange={(event) => {
+					setDuration(event.target.value);
+				}}
+			>
 				<option key="0" value="1000">
 					1 second
 				</option>
@@ -88,7 +92,7 @@ export default () => {
 				button {
 					background: lightgreen;
 					color: red;
-					font-size: 400%;
+					font-size: 3vw;
 					width: 50vw;
 					margin-left: 25vw;
 					height: 15vh;
