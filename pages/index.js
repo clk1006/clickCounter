@@ -19,7 +19,7 @@ export default () => {
 
 	return (
 		<div className="root">
-			<h1>The click detector</h1>
+			<h1>The click counter</h1>
 			<label>Select duration of playing</label>
 			<select>
 				<option key="0" value="1000">
